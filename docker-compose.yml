@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  register-login-service:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'main_db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'rootpassword'
+    ports:
+      - "24306:3306"
